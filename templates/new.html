@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+    <title>About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% url 'main' %}" />
+</head>
+<body>
+    <section id="banner">
+        <h2><strong>Bloggers</strong> is a blog site about BlockChain</h2>
+        <ul class="actions">
+            <li><a href="{% url 'home' %}" class="button special">Blog</a></li>
+        </ul>
+    </section>
+
+    <section id="one" class="wrapper special">
+        <div class="inner">
+            <header class="major">
+                <h2>About Us</h2>
+            </header>
+            <div class="features">
+                <div class="feature">
+                    <i class="fa fa-diamond"></i>
+                    <h3>The Blog</h3>
+                    <p>This Blog Was Created Using Django FrameWork.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa fa-copy"></i>
+                    <h3>The Team</h3>
+                    <p>Nandha Kumar V.<br />Saran M.<br />Pudhiyavan S. M.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa fa-paper-plane-o"></i>
+                    <h3>GitHub Repository</h3>
+                    <p>github.com/CrimsonClaw/<br />Bloggers.git</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="two" class="wrapper style2 special">
+        <div class="inner narrow">
+            <header>
+                <h2>Get in touch</h2>
+            </header>
+            <form class="grid-form" method="post" action="">
+                {% csrf_token %}
+                <div class="form-control narrow">
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text">
+                </div>
+                <div class="form-control narrow">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email">
+                </div>
+                <div class="form-control">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                </div>
+                <ul class="actions">
+                    <li>
+                    <li><input value="Send Message" type="submit"></li>
+                </ul>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
